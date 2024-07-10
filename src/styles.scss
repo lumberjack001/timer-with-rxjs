@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+body{
+  --bg-color: #fff;
+  --card-color: #f9f9f9;
+  --pause-btn-border-color: #D1D1D1;
+  --time: #000;
+  --timer-bg: #fff;
+
+  color: var(--time);
+  background-color: var(--bg-color);
+  transition: all 0.3s ease-out;
+}
+body.dark{
+  --bg-color: #01131E;
+  --card-color: #011C2C;
+  --pause-btn-border-color: #EAEAEA;
+  --time: #fff;
+  --timer-bg: transparent; 
+}
+
+.timer-card{
+  padding-inline: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 5px solid #FD6259;
+  border-radius: 0.5rem;
+  background-color: var(--card-color);
+  transition: all 0.5s ease-out;
+
+}
+
+.clock{
+  padding: 1.5rem;
+  padding-block: 0.2rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--pause-btn-border-color);
+  color: var(--time);
+  font-size: 3rem;
+  background-color: var(--timer-bg);
+  transition: all 0.3s ease-out;
+
+}
+
+.actions-btn{
+  border-radius: 0.3rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.actions-btn:hover{
+  transform: scale(1.1);
+}
+
+.start-btn{
+  background-color: #03AE85;
+}
+.pause-btn{
+  background-color: transparent;
+  color: var(--time);
+  border: 1px solid var(--pause-btn-border-color);
+}
+.reset-btn{
+  background-color: #FD6259;
+}
+
+.theme-btn{
+  background-color: var(--card-color);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 60px;
+}
