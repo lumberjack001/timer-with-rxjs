@@ -8,23 +8,23 @@
 
     <div class="time-container d-flex gap-4">
       <div class="d-flex flex-column text-center">
-        <span class="clock">00</span>
+        <span class="clock">{{ pad(time.hours) }}</span>
         <p>Hours</p>
       </div>
       <div class="d-flex flex-column text-center">
-        <span class="clock">00</span>
+        <span class="clock">{{ pad(time.minutes) }}</span>
         <p>Minutes</p>
       </div>
       <div class="d-flex flex-column text-center">
-        <span class="clock">00</span>
+        <span class="clock">{{ pad(time.seconds) }}</span>
         <p>Seconds</p>
       </div>
     </div>
 
     <div class="action-container d-flex gap-3">
-      <button class="actions-btn start-btn">START</button>
-      <button class="actions-btn pause-btn">PAUSE</button>
-      <button class="actions-btn reset-btn">RESET</button>
+      <button class="actions-btn start-btn" (click)="start()">START</button>
+      <button class="actions-btn pause-btn" (click)="pause()">PAUSE</button>
+      <button class="actions-btn reset-btn" (click)="reset()">RESET</button>
     </div>
   </div>
 </main>
