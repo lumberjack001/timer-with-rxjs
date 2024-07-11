@@ -1,0 +1,36 @@
+
+<main class="main-container d-flex justify-content-center align-items-center">
+  <div class="timer-card d-flex flex-column gap-3">
+
+    <h3 class="heading text-center">TEST RUN</h3>
+
+    <div>
+      <h4>Lets try and see if we can make the time stop from a different page</h4>
+    </div>
+
+    <div>
+      <p>Trying to display the clock on both pages</p>
+      <div class="time-container d-flex gap-4">
+        <div class="d-flex flex-column text-center">
+          <span class="clock">{{ '0' + time.hours }}</span>
+          <p>Hours</p>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <span class="clock">{{ '0' + time.minutes }}</span>
+          <p>Minutes</p>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <span class="clock">{{ '0' + time.seconds }}</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+    <div class="action-container d-flex gap-3">
+      <button class="actions-btn start-btn" (click)="start()">START</button>
+      <button class="actions-btn pause-btn" (click)="pause()">PAUSE</button>
+      <button class="actions-btn reset-btn" (click)="reset()">RESET</button>
+    </div>
+
+    <a routerLink="/" class="text-center">Go Home</a>
+  </div>
+</main>
